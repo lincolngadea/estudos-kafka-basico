@@ -15,8 +15,9 @@ public class NewOrderMain{
         var producer = new KafkaProducer<String, String>(properties());
         var value = "132123,67523,7894589745";
         var record = new ProducerRecord<>("ECOMMERCE_NEW_ORDER",value,value);
-        producer.send(record, (data, ex)->{
-            if(ex != null){
+
+        Callback callback = (data, ex) -> {
+            if (ex != null) {
                 ex.printStackTrace();
                 return;
             }
@@ -24,7 +25,12 @@ public class NewOrderMain{
                     + ":::partition " + data.partition()
                     + "/ offset " + data.offset()
                     + "/ timeStamp " + data.timestamp() + "/");
-        }).get();//o Send é um método assíncrono
+        };
+        var email = "Obrigado por sua compra, nós estamos processando o seu pedido!";
+        var emailRecord = new ProducerRecord<>("ECOMMERCE_SEND_EMAIL",email,email);
+        producer.send(record, callback).get();//o Send é um método assíncrono
+
+        producer.send(emailRecord, callback).get();
     }
 
     //Definindo as propriedades do kafka
