@@ -6,7 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="aluraKafka" />
+        <module name="service-log" />
+        <module name="service-newOrder" />
+        <module name="common-kafka" />
+        <module name="service-email" />
+        <module name="service-fraude-detector" />
       </profile>
     </annotationProcessing>
   </component>
