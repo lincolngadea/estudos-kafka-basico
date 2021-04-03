@@ -2,6 +2,8 @@ package br.com.alura.ecommerce;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
+import java.util.Map;
+
 //Cria os consumers para os tópicos...
 public class EmailService {
 
@@ -10,7 +12,9 @@ public class EmailService {
         try (var service = new KafkaService(
                 EmailService.class.getSimpleName(),
                 "ECOMMERCE_SEND_EMAIL",
-                emailService::parse)) {
+                emailService::parse,
+                String.class,
+                Map.of())) {
             service.run();
         }
     }
