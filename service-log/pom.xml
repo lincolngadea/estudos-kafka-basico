@@ -11,12 +11,7 @@
 
     <artifactId>service-log</artifactId>
     <dependencies>
-        <dependency>
-            <groupId>br.com.alura</groupId>
-            <artifactId>ecomerce</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
+
         <dependency>
             <groupId>br.com.alura</groupId>
             <artifactId>common-kafka</artifactId>

@@ -1,0 +1,5 @@
+/home/lincolngadea/IdeaProjects/aluraKafka/common-kafka/src/main/java/br/com/alura/ecommerce/ConsumerFunction.java
+/home/lincolngadea/IdeaProjects/aluraKafka/common-kafka/src/main/java/br/com/alura/ecommerce/KafkaDispatcher.java
+/home/lincolngadea/IdeaProjects/aluraKafka/common-kafka/src/main/java/br/com/alura/ecommerce/KafkaService.java
+/home/lincolngadea/IdeaProjects/aluraKafka/common-kafka/src/main/java/br/com/alura/ecommerce/GsonDeserializer.java
+/home/lincolngadea/IdeaProjects/aluraKafka/common-kafka/src/main/java/br/com/alura/ecommerce/GsonSerializer.java
